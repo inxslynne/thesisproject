@@ -13,11 +13,14 @@ The repository is organized into two main folders, each dedicated to one of the 
    - **`Jacobs1999_PalierneBlobs.pdf`**: The original Jacobs (1999) article, which serves as the basis for reproduction and analysis.
 
 ### 2. `Kim&Mason/`
-   - **`2014mason.pdf`**: An earlier article by Mason that provides foundational concepts relevant to the 2016 study.
-   - **`EEI.pdf`**: Reference material.
-   - **`Kim_Mason_Reproduction.pdf`**: A document summarizing the reproduction and comparing the results to the original findings.
+  - **`Reference/`**: Contains reference materials, including relevant articles that support the study.
+     - **`2014mason.pdf`**: An earlier article by Mason that provides foundational concepts relevant to the 2016 study.
+     - **`EEI.pdf`**: Additional reference material related to the free energy model.
+   - **`previous code/`**: Stores code versions developed prior to the final reproduction, in Julia and Python languages.
+   - **`Kim_Mason_Reproduction.pdf`**: A document summarizing the reproduction process and comparing the results to the original findings.
    - **`py-kimmason-final.ipynb`**: The final code used for reproducing the main results from Kim & Mason (2016).
    - **`py-kimmason-check.ipynb`**: Supplementary code that includes checks for singularities and other critical points to ensure model accuracy.
+
 
 <!-- ## Usage
 - **Kim & Mason Reproduction**:
