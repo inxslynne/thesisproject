@@ -19,6 +19,8 @@ The repository is organized into two main folders, each dedicated to one of the 
    - **`previous code/`**: Stores code versions developed prior to the final reproduction, in Julia and Python languages.
    - **`Kim_Mason_Reproduction.pdf`**: A document summarizing the reproduction process and comparing the results to the original findings.
    - **`py-kimmason-final.ipynb`**: The final code used for reproducing the main results from Kim & Mason (2016).
+   - **`py-kimmason-considerT.ipynb`**: Consider temperature T as a variable and calculate the Plateau elastic shear modulus $G'_p$.
+   - **`modeltest.ipynb`**: A simplified code to facilitate comparison between experimental data and the results of the EEI model.
    - **`py-kimmason-check.ipynb`**: Supplementary code that includes checks for singularities and other critical points to ensure model accuracy.
 
 
