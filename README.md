@@ -1,11 +1,11 @@
-# thesisproject
-Related papers and code reproduction
+# Thesis Project
 ## Project Overview
-This repository contains the code and documentation for the reproduction and analysis of two key articles on emulsion modeling:
-1. **Kim & Mason (2016)** - Focuses on a free energy minimization model describing the behavior of concentrated monodisperse ionic emulsions, specifically for systems with uniform droplet size.
-2. **Jacobs (1999)** - Examines emulsion properties using the Palierne model.
+This repository contains reproducible notebooks, references and supporting scripts for the study of (mainly emulsion) rheology. It reproduces landmark models (Jacobs 1999 - Palierne model; Kim & Mason 2016 - EEI model) for simulating droplet stacking for a given volume fraction. All notebooks are written in Python, rely only on open source libraries, and can be run interactively in Jupyter Lab. 
 
-The repository is organized into three main folders, each dedicated to one of the articles.
+**For confidentiality reasons, the raw experimental data used in some notebooks is not included in this repository.**  
+
+
+The repository is organized into three main folders.
 
 ## Folder Structure
 
@@ -31,15 +31,19 @@ The repository is organized into three main folders, each dedicated to one of th
    - **`EEI.pdf`**: Reference material related to the free energy model.
    - **`py-kimmason-final.ipynb`**:  Implements the electrostatic–entropic–interfacial (EEI) model proposed by Kim & Mason (2016) for emulsions.  
       * Builds the full free-energy landscape *F = F<sub>int</sub> + F<sub>ent</sub> + F<sub>elec</sub>* and determines the equilibrium deformed-droplet fraction φ<sub>d</sub> via numerical minimisation.  
-      * Calculates the plateau elastic shear modulus *G<sub>p</sub>* and visualises its dependence on droplet volume fraction φ, strain rate γ̇, droplet radius *a*, ionic strength, and surface potential.  
-      * Provides interactive `ipywidgets` sliders plus 3-D surface/contour plots for rapid sensitivity analysis, and exports publication-ready figures (`figures/*.png`) as well as CSV tables of *G<sub>p</sub>* vs φ.
-
+      * Calculates the plateau elastic shear modulus *G<sub>p</sub>* and osmotic Pressure $\pi$, visualises its dependence on droplet volume fraction, strain rate, droplet radius, ionic strength, and surface potential.  
    - **`py-kimmason-considerT.ipynb`**: Consider temperature T as a variable and calculate the Plateau elastic shear modulus $G'_p$.
-   - **`py-kimmason-modeltest_final.ipynb`**: A simplified code to facilitate comparison between experimental data and the results of the EEI model.
+   - **`py-kimmason-modeltest_final.ipynb`**: Applies the EEI model to experimental frequency-sweep data from five mayonnaise-like emulsions.  
+      * Loads sample metadata (T, *a*, ionic strength, surface tension, ζ-potential) and performs global as well as sample-specific non-linear least-squares fits to extract the optimal entropic coefficient α and electrostatic coefficient ξ.  
+      * Ranks fits with error, overlays model curves on the experimental *G<sub>p</sub>*–φ data (log‐scale), and summarises best-fit parameters.  
+      * Generates corner plots for parameter covariance and a master curve comparing all samples, facilitating quick visual validation of model performance.
 
 
 ### 3. `volume fraction/`
-   - **`RSA.ipynb`**:
+   - **`RSA.ipynb`**: Quick 2-D random-sequential-adsorption (RSA) simulator for droplets.  
+      * Packs polydisperse circles in a square box until no more can fit.  
+      * Lets you tweak droplet size distribution (log-normal), box size *L*, and RNG seed.  
+      * Outputs final area fraction, list of (x, y, r) coordinates, and a PNG of the packing.
 
 ## License
-This project is for educational and research purposes. Please cite the original articles if you use or reference this work. -->
+This project is for educational and research purposes. Please cite the original articles if you use or reference this work.
